@@ -1,0 +1,53 @@
+body {
+    margin: 0;
+}
+
+.App {
+    background: #fff;
+    height: 100vh;
+
+    &.on {
+        background: #111;
+        color: #fff;
+    }
+
+    .dark_btn {
+        position: relative;
+
+        button {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+
+        label {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            display: inline-block;
+            width: 100px;
+            height: 30px;
+            background: #ddd;
+            font-size: 0;
+            border-radius: 15px;
+
+            &::after {
+                content: "";
+                position: absolute;
+                top: 2px;
+                left: 5px;
+                width: 26px;
+                height: 26px;
+                background: greenyellow;
+                border-radius: 50%;
+            }
+
+            &.on::after {
+                background: #333;
+                left: auto;
+                right: 2px;
+            }
+        }
+    }
+}
